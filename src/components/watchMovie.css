@@ -1,0 +1,43 @@
+.watch-movie-wrapper {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+.watch-movie-wrapper .side-panel {
+    width: 30%;
+    height: 100%;
+    background-color: #141414;
+}
+
+.watch-movie-wrapper .side-panel h1 {
+    margin-top: 40%;
+}
+
+.watch-movie-wrapper .poster-image {
+    width: 70%;
+    height: 100%;
+}
+
+.watch-movie-wrapper .poster-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 850px) {
+    .watch-movie-wrapper .side-panel {
+        z-index: 2;
+        width: 100%;
+        background-color: rgba(20, 20, 20, 0.9);
+    }
+    .watch-movie-wrapper .poster-image {
+        position: absolute;
+        z-index: 0;
+        width: 100%;
+    }
+}

@@ -1,0 +1,20 @@
+.carousel {
+    background-color: #111111;
+    padding: 1px 0;
+}
+
+.carousel h1 {
+    padding: 0 10px;
+    color: #ffffff;
+}
+
+.carousel .movie-wrapper {
+    height: 360px;
+    width: inherit;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 25px 25px 25px 0;
+}
