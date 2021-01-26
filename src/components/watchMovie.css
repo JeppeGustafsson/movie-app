@@ -29,6 +29,22 @@
     object-fit: cover;
 }
 
+.exit {
+    padding: 0.7rem 1rem;
+    background-color: hsla(0, 0%, 17%, 0.7);
+    color: #ffffff;
+    border-radius: 50% 50%;
+    font-size: 1.2rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.exit:hover {
+    background-color: hsla(0, 0%, 17%, 1);
+}
+
 @media screen and (max-width: 850px) {
     .watch-movie-wrapper .side-panel {
         z-index: 2;

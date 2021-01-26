@@ -18,13 +18,21 @@ class WatchMovie extends React.Component {
             this.setState({
                 movieContent: item[0]
             });
-            this.checkContent();
+            this.checkForContent(); //Fix so this doesn't remove the link all the freaking time
     }
 
-    checkContent = () => {
-        this.state.movieContent.length === 0
-        ? history.push('/') :
-        history.push(this.state.movieContent.title)
+    checkForContent = () => {
+        // this.state.movieContent.length === 0
+        // ? history.push('/') :
+        // history.push(this.state.movieContent.title)
+    }
+
+    exit = () => {
+        history.push('/');
+        history.go(-2);
+        this.setState({
+            movieContent: []
+        });
     }
 
     render() { 
@@ -32,6 +40,7 @@ class WatchMovie extends React.Component {
         return ( 
             <div className="watch-movie-wrapper">
                 <div className="poster-image">
+                <div onClick={this.exit} className="exit">X</div>
                 <img src={
                     `https://image.tmdb.org/t/p/w600_and_h900_bestv2${this.state.movieContent.poster_path}`
                 } alt="hero image"/>
